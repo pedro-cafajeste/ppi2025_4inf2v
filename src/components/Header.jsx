@@ -1,9 +1,10 @@
 import styles from "./Header.module.css";
-import { ShoppingBasket } from "lucide-react";
+import { ShoppingBasket, CircleUserRound } from "lucide-react";
 import { Link } from "react-router";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { ThemeToggle } from "./ThemeToggle";
+
 
 export function Header() {
   const { cart, session } = useContext(CartContext);
@@ -27,8 +28,8 @@ export function Header() {
             <Link to="/signin" className={styles.link}>
               Sign In
             </Link>
-            <Link to="/register" className={styles.link}>
-              Register
+            <Link to="/user" className={styles.link}>
+              Account
             </Link>
           </>
         )}
